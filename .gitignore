@@ -2,3 +2,17 @@
 playwright-report
 test-results
 node_modules
+# Python specific
+.vscode
+*.py[cod]
+__pycache__/
+# virtual environments
+*.venv/
+venv/
+tests/python/.venv/
+# pytest cache & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+# Playwright traces and reports (if generated inside python dir)
+traces/
