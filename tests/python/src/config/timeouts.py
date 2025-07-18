@@ -1,0 +1,4 @@
+class TIMEOUTS:
+    FAST = 5_000
+    MEDIUM = 20_000
+    SLOW = 30_000 
