@@ -55,6 +55,14 @@ npx playwright test src/tests/wiki-headings.spec.ts            # single file
 npx playwright test -g "Wikipedia Article Structure"           # by title / grep
 ```
 
+### 4. Inside Docker
+
+```bash
+npm run test:docker          # builds image then runs tests inside it
+```
+
+The script uses the provided `Dockerfile` (Playwright base image) and mounts nothing to ensure a clean, reproducible run.
+
 ---
 ## Linting
 
