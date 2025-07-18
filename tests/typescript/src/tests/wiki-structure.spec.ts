@@ -4,8 +4,8 @@ import articles from '../data/wiki-articles.json' assert { type: 'json' }
 import { TIMEOUTS } from '../config/timeouts';
 
 interface ArticleData {
-  slug: string;
-  title: string;
+  slug: string
+  title: string
 }
 
 const articleData: ArticleData[] = articles as ArticleData[]
@@ -27,11 +27,11 @@ test.describe('SC-WIKI-STRUCT-001: Wikipedia Article Structure', () => {
       })
 
       await test.step('Verify Table of Contents is visible', async () => {
-        await expect(wikiPage.toc).toBeVisible({ timeout: TIMEOUTS.Medium });
+        await expect(wikiPage.toc).toBeVisible({ timeout: TIMEOUTS.Medium })
       })
 
       await test.step('Verify Infobox is visible', async () => {
-        await expect(wikiPage.infobox.first()).toBeVisible({ timeout: TIMEOUTS.Medium });
+        await expect(wikiPage.infobox.first()).toBeVisible({ timeout: TIMEOUTS.Medium })
       })
 
       await test.step('Verify References section exists', async () => {
