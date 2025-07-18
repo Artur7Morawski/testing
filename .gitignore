@@ -16,3 +16,8 @@ tests/python/.venv/
 htmlcov/
 # Playwright traces and reports (if generated inside python dir)
 traces/
+# Java/Maven
+*.class
+target/
+.idea/
+.mvn/
