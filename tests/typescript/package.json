@@ -15,6 +15,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "test": "npm run lint && npx playwright test",
-    "test:headed": "npm run lint && npx playwright test --headed"
+    "test:headed": "npm run lint && npx playwright test --headed",
+    "test:docker": "docker build -t wiki-playwright-tests . && docker run --rm wiki-playwright-tests"
   }
 } 
