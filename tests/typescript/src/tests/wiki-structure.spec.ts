@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { WikiPage } from '@pages/wiki.page'
 import articles from '../data/wiki-articles.json' assert { type: 'json' }
+import { TIMEOUTS } from '../config/timeouts';
 
 interface ArticleData {
   slug: string;
@@ -26,11 +27,11 @@ test.describe('SC-WIKI-STRUCT-001: Wikipedia Article Structure', () => {
       })
 
       await test.step('Verify Table of Contents is visible', async () => {
-        await expect(wikiPage.toc).toBeVisible({ timeout: 10000 })
+        await expect(wikiPage.toc).toBeVisible({ timeout: TIMEOUTS.Medium });
       })
 
       await test.step('Verify Infobox is visible', async () => {
-        await expect(wikiPage.infobox.first()).toBeVisible({ timeout: 10000 })
+        await expect(wikiPage.infobox.first()).toBeVisible({ timeout: TIMEOUTS.Medium });
       })
 
       await test.step('Verify References section exists', async () => {
