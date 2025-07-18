@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { WikiPage } from '@pages/wiki.page'
 import articles from '../data/wiki-articles.json' assert { type: 'json' }
-import { TIMEOUTS } from '../config/timeouts';
+import { TIMEOUTS } from '../config/timeouts'
 
 interface ArticleData {
   slug: string
