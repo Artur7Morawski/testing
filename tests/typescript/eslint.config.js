@@ -21,6 +21,8 @@ const config = [
       },
     },
     rules: {
+      'semi': ['error', 'never'],
+      '@typescript-eslint/semi': ['error', 'never'],
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/await-thenable': 'error',
       '@typescript-eslint/no-misused-promises': 'error',
