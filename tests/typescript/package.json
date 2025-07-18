@@ -16,6 +16,6 @@
     "lint": "eslint . --ext .ts",
     "test": "npm run lint && npx playwright test",
     "test:headed": "npm run lint && npx playwright test --headed",
-    "test:docker": "DOCKER_BUILDKIT=1 docker build --progress=plain -t wiki-playwright-tests . && docker run --rm -it --ipc=host wiki-playwright-tests"
+    "test:docker": "npm run lint && DOCKER_BUILDKIT=1 docker build --progress=plain -t wiki-playwright-tests . && docker run --rm -it --ipc=host wiki-playwright-tests"
   }
 } 
